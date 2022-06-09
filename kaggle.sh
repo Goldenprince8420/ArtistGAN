@@ -15,6 +15,6 @@ kaggle competitions download -c gan-getting-started
 kaggle datasets download -d rahulgolder/cyclegan-training-weights
 mkdir data
 unzip gan-getting-started.zip -d data
-mkdir weights
-unzip cyclegan-training-weights.zip -d weights
+#mkdir weights
+#unzip cyclegan-training-weights.zip -d weights
 echo "Installation and preparation done!!"
