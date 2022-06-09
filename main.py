@@ -17,5 +17,5 @@ if __name__ == '__main__':
     photo_data_loaded = load_data(photo_data)
     show_example(data_loaded)
     generator_real_to_painter, generator_painter_to_real = train(data_loaded, device = device,
-                                                                 weight_path_if_any = "weights/cyclegan_17800.pth")
+                                                                 weight_path_if_any = "weights/cycleGAN_17800.pth")
     get_submission(photo_data_loaded, generator = generator_real_to_painter)
