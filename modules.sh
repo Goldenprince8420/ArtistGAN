@@ -1,0 +1,10 @@
+echo "Installing Modules"
+pip install numpy
+pip install pandas
+pip install matplotlib
+pip install Pillow
+pip install sklearn
+pip install torch
+pip install torchvision
+pip install opencv-python
+echo "Installation Complete!!"

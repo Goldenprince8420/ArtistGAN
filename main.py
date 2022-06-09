@@ -1,21 +1,20 @@
-# This is a sample Python script.
+from data import *
+from viz import *
+from inference import *
+from train import *
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-import os
-import subprocess
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-    # out = os.system('ls')
-    out = subprocess.run('ls', shell = True)
-    print(out)
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    os.makedirs('Saved_Models', exist_ok=True)
+    os.makedirs('Results', exist_ok=True)
+    seed_index = 1003
+    set_seed(seed_index)
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    data = ImageDataset('data/monet_jpg', 'data/photo_jpg')
+    photo_data = PhotoDataset('/content/data/photo_jpg')
+    monet_data = PaintingDataset('/content/data/monet_jpg')
+    data_loaded = load_data(data)
+    monet_data_loaded = load_data(monet_data)
+    photo_data_loaded = load_data(photo_data)
+    show_example(data_loaded)
+    generator_real_to_painter, generator_painter_to_real = train(data_loaded, device = device)
+    get_submission(photo_data_loaded, generator = generator_real_to_painter)
