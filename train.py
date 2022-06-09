@@ -67,7 +67,7 @@ def train(data_loaded, device = 'cpu', do_save_model=False, weight_path_if_any =
     dataloader = data_loaded
     current_step = 0
     PARAMS, MODELS = params_and_models(device = device)
-    MODELS = weighted_models(MODELS, weight_path_if_any)
+    MODELS = weighted_models(MODELS, weight_path_if_any = weight_path_if_any, pretrained = True)
     for epoch in range(PARAMS["EPOCHS"]):
         for real_A, real_B in tqdm(dataloader):
             curr_batch_size = len(real_A)
