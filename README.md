@@ -1,3 +1,5 @@
+#ArtistGAN
+##Project Summary
 This Repository is a **Generative Modelling Project**. <br>
 Author of this Project: **Rahul Golder** <br>
 
@@ -6,6 +8,8 @@ Project Created as part of the Kaggle Competetion: *I'm Something of a Painter M
 About the Project: The model ArtistGAN will convert a real-domain image to a monet style painting domain image through a domain transfer feature mapping.<br>
 
 Motivation of Modelling Architecture: **CycleGAN Model for Domain Features Transfer**. <br>
+
+##Getting Started
 Getting Started with the Project: <br>
 1. Run the following code for to import os module and also create a content directory. <br>
 `import os` <br>
