@@ -9,7 +9,7 @@ from viz import show_tensor_images
 def params_and_models(device):
     PARAMS = {"adversarial_criterion": nn.MSELoss(),
               "recon_criterion": nn.L1Loss(),
-              "EPOCHS": 3,
+              "EPOCHS": 2,
               "dim_A": 3,
               "dim_B": 3,
               "DISPLAY_STEP": 200,
@@ -50,9 +50,9 @@ def weighted_models(gen_AB, gen_BA, gen_opt, disc_A, disc_A_opt, disc_B, disc_B_
         gen_BA.load_state_dict(pre_dict["gen_BA"])
         gen_opt.load_state_dict(pre_dict["gen_opt"])
         disc_A.load_state_dict(pre_dict["disc_A"])
-        disc_A_opt.load_state_dict(pre_dict["disc_A"])
+        disc_A_opt.load_state_dict(pre_dict["disc_A_opt"])
         disc_B.load_state_dict(pre_dict["disc_B"])
-        disc_B_opt.load_state_dict(pre_dict["disc_B"])
+        disc_B_opt.load_state_dict(pre_dict["disc_B_opt"])
     else:
         gen_AB = gen_AB.apply(weights_init)
         gen_BA = gen_BA.apply(weights_init)
