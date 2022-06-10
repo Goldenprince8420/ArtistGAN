@@ -1,5 +1,5 @@
-#ArtistGAN
-##Project Summary
+# ArtistGAN<br>
+## Project Summary<br>
 This Repository is a **Generative Modelling Project**. <br>
 Author of this Project: **Rahul Golder** <br>
 
@@ -9,7 +9,7 @@ About the Project: The model ArtistGAN will convert a real-domain image to a mon
 
 Motivation of Modelling Architecture: **CycleGAN Model for Domain Features Transfer**. <br>
 
-##Getting Started
+## Getting Started<br>
 Getting Started with the Project: <br>
 1. Run the following code for to import os module and also create a content directory. <br>
 `import os` <br>
